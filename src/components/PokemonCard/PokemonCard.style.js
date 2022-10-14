@@ -2,10 +2,11 @@ import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
   container: {
-    height: 100,
-    borderRadius:10,
+    height: 110,
+    borderRadius: 10,
     backgroundColor: 'crimson',
     padding: 8,
+    paddingHorizontal: 12,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
@@ -15,13 +16,15 @@ export default StyleSheet.create({
   },
   image: {
     width: 100,
+    height: 100,
   },
   hashText: {
+    fontSize: 15,
     fontWeight: 'bold',
   },
   nameText: {
     fontWeight: 'bold',
     color: 'white',
     fontSize: 20,
-  }
+  },
 });
