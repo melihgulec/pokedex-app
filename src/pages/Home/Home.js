@@ -8,7 +8,7 @@ import PokemonCard from '../../components/PokemonCard/PokemonCard';
 import WhiteSpace from '../../components/WhiteSpace/WhiteSpace';
 import Search from '../../components/Search/Search';
 
-const Home = () => {
+const Home = ({navigation}) => {
   const pokemonState = useSelector(state => state.pokemons);
 
   const dispatch = useDispatch();
@@ -17,8 +17,17 @@ const Home = () => {
     dispatch(fetchPokemons());
   }, [dispatch]);
 
+  const navigatePokemonDetailScreen = pokemon => {
+    navigation.navigate('PokemonDetailScreen', {pokemon});
+  };
+
   const renderPokemonCard = item => {
-    return <PokemonCard pokemon={item.item} />;
+    return (
+      <PokemonCard
+        pokemon={item.item}
+        onPress={() => navigatePokemonDetailScreen(item.item)}
+      />
+    );
   };
 
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Image, FlatList} from 'react-native';
+import {View, Text, Image, FlatList, TouchableOpacity} from 'react-native';
 import capitalize from '../../utils/Capitalize';
 import TypeChip from '../TypeChip';
 import WhiteSpace from '../WhiteSpace/WhiteSpace';
@@ -7,15 +7,14 @@ import WhiteSpace from '../WhiteSpace/WhiteSpace';
 import styles from './PokemonCard.style';
 import getColorFromType from '../../utils/ColorFromType';
 
-const PokemonCard = ({pokemon}) => {
+const PokemonCard = ({pokemon, onPress}) => {
   const renderTypeChips = ({item}) => {
     return <TypeChip type={capitalize(item)} />;
   };
 
-  console.log(pokemon)
-
   return (
-    <View
+    <TouchableOpacity
+      onPress={onPress}
       style={[
         styles.container,
         {backgroundColor: getColorFromType(pokemon.types[0])},
@@ -38,7 +37,7 @@ const PokemonCard = ({pokemon}) => {
           uri: pokemon.image,
         }}
       />
-    </View>
+    </TouchableOpacity>
   );
 };
 
