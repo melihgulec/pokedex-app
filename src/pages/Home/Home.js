@@ -31,7 +31,7 @@ const Home = () => {
         <FlatList
           data={pokemonState.data}
           renderItem={renderPokemonCard}
-          ItemSeparatorComponent={() => <WhiteSpace />}
+          ItemSeparatorComponent={() => <WhiteSpace vertical />}
         />
       )}
     </View>

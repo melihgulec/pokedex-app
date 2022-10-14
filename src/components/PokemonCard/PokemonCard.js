@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Text, Image, FlatList} from 'react-native';
 import capitalize from '../../utils/Capitalize';
 import TypeChip from '../TypeChip';
+import WhiteSpace from '../WhiteSpace/WhiteSpace';
 
 import styles from './PokemonCard.style';
 
@@ -21,6 +22,7 @@ const PokemonCard = ({pokemon}) => {
           style={styles.typesContainer}
           data={pokemon.types}
           renderItem={renderTypeChips}
+          ItemSeparatorComponent={() => <WhiteSpace vertical={false} />}
         />
       </View>
       <Image
