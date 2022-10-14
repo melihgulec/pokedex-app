@@ -6,6 +6,7 @@ import {fetchPokemons} from '../../config/slices/pokemonSlice';
 import styles from './Home.style';
 import PokemonCard from '../../components/PokemonCard/PokemonCard';
 import WhiteSpace from '../../components/WhiteSpace/WhiteSpace';
+import Search from '../../components/Search/Search';
 
 const Home = () => {
   const pokemonState = useSelector(state => state.pokemons);
@@ -24,7 +25,9 @@ const Home = () => {
     <View style={styles.container}>
       <Text style={styles.title}>Pokédex</Text>
       <Text style={styles.searchInfoText}>Search for Pokémon by name.</Text>
-      <WhiteSpace />
+      <WhiteSpace vertical />
+      <Search />
+      <WhiteSpace vertical />
       {pokemonState.loading ? (
         <ActivityIndicator />
       ) : (
