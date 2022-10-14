@@ -27,4 +27,7 @@ export default StyleSheet.create({
     color: 'white',
     fontSize: 20,
   },
+  typesContainer: {
+    flexDirection: 'row',
+  },
 });
