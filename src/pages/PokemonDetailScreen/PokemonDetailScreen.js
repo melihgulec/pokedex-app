@@ -7,6 +7,7 @@ import WhiteSpace from '../../components/WhiteSpace/WhiteSpace';
 import capitalize from '../../utils/Capitalize';
 import getColorFromType from '../../utils/ColorFromType';
 import AboutScreen from '../AboutScreen/AboutScreen';
+import StatsScreen from '../StatsScreen';
 
 import styles from './PokemonDetail.style';
 
@@ -43,7 +44,7 @@ const PokemonDetailScreen = ({route}) => {
             <AboutScreen pokemon={pokemon} />
           </TabBar.Tab>
           <TabBar.Tab title={'Stats'}>
-            <Text>2. tab</Text>
+            <StatsScreen pokemon={pokemon} />
           </TabBar.Tab>
           <TabBar.Tab title={'Evolution'}>
             <Text>3. tab</Text>
