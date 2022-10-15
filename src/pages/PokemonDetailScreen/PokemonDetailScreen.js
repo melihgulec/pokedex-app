@@ -9,6 +9,7 @@ import WhiteSpace from '../../components/WhiteSpace/WhiteSpace';
 import capitalize from '../../utils/Capitalize';
 import getColorFromType from '../../utils/ColorFromType';
 import AboutScreen from '../AboutScreen/AboutScreen';
+import DescriptionScreen from '../DescriptionScreen/DescriptionScreen';
 import StatsScreen from '../StatsScreen';
 
 import styles from './PokemonDetail.style';
@@ -56,8 +57,8 @@ const PokemonDetailScreen = ({route, navigation}) => {
           <TabBar.Tab title={'Stats'}>
             <StatsScreen pokemon={pokemon} />
           </TabBar.Tab>
-          <TabBar.Tab title={'Evolution'}>
-            <Text>3. tab</Text>
+          <TabBar.Tab title={'Description'}>
+            <DescriptionScreen pokemon={pokemon} />
           </TabBar.Tab>
         </TabBar>
       </View>
