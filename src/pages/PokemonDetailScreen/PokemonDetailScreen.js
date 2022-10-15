@@ -1,5 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View, Text, FlatList, Image} from 'react-native';
+
+import TabBar from '../../components/TabBar/TabBar';
 import TypeChip from '../../components/TypeChip';
 import WhiteSpace from '../../components/WhiteSpace/WhiteSpace';
 import capitalize from '../../utils/Capitalize';
@@ -35,6 +37,17 @@ const PokemonDetailScreen = ({route}) => {
       </View>
       <View style={styles.detailContainer}>
         <Image style={styles.pokemonImage} source={{uri: pokemon.image}} />
+        <TabBar>
+          <TabBar.Tab title={'About'}>
+            <Text>1. tab</Text>
+          </TabBar.Tab>
+          <TabBar.Tab title={'Stats'}>
+            <Text>2. tab</Text>
+          </TabBar.Tab>
+          <TabBar.Tab title={'Evolution'}>
+            <Text>3. tab</Text>
+          </TabBar.Tab>
+        </TabBar>
       </View>
     </View>
   );
