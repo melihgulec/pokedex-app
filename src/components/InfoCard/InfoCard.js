@@ -3,11 +3,11 @@ import {View, Text} from 'react-native';
 
 import styles from './InfoCard.style';
 
-const InfoCard = ({title, contentText}) => {
+const InfoCard = ({title, component}) => {
   return (
     <View style={styles.container}>
       <Text style={styles.titleText}>{title}</Text>
-      <Text style={styles.contentText}>{contentText}</Text>
+      {component}
     </View>
   );
 };

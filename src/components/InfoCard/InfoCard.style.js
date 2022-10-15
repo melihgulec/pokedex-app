@@ -7,8 +7,4 @@ export default StyleSheet.create({
   titleText: {
     flex: 1,
   },
-  contentText: {
-    flex: 2,
-    color: 'black',
-  },
 });
