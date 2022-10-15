@@ -9,8 +9,13 @@ import capitalize from '../../utils/Capitalize';
 import styles from './AboutScreen.style';
 
 const AboutScreen = ({pokemon}) => {
+  console.log(pokemon)
   return (
     <ScrollView>
+      <Title text={'Info'} />
+      <WhiteSpace vertical />
+      <Text>{pokemon.description}</Text>
+      <WhiteSpace vertical />
       <InfoCard
         title={'Species'}
         component={<Text style={styles.contentText}>{pokemon.species}</Text>}
