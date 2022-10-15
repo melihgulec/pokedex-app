@@ -27,6 +27,11 @@ const StatsScreen = ({pokemon}) => {
 
   return (
     <ScrollView>
+      <Title text={'Base Stats'} />
+      <WhiteSpace vertical />
+      <Text>Base stats about {capitalize(pokemon.name)}</Text>
+      <WhiteSpace vertical />
+      <WhiteSpace vertical />
       <InfoCard
         title={'HP'}
         component={
@@ -77,8 +82,6 @@ const StatsScreen = ({pokemon}) => {
         title={'Total'}
         component={<Text style={styles.contentText}>{totalPower}</Text>}
       />
-      <WhiteSpace vertical />
-      <Text>{pokemon.description}</Text>
       <WhiteSpace vertical />
     </ScrollView>
   );
