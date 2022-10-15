@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {View, Text, FlatList, Image, TouchableOpacity} from 'react-native';
 
 import Icon from 'react-native-vector-icons/dist/Ionicons';
@@ -9,7 +9,6 @@ import WhiteSpace from '../../components/WhiteSpace/WhiteSpace';
 import capitalize from '../../utils/Capitalize';
 import getColorFromType from '../../utils/ColorFromType';
 import AboutScreen from '../AboutScreen/AboutScreen';
-import DescriptionScreen from '../DescriptionScreen/DescriptionScreen';
 import StatsScreen from '../StatsScreen';
 
 import styles from './PokemonDetail.style';
@@ -56,9 +55,6 @@ const PokemonDetailScreen = ({route, navigation}) => {
           </TabBar.Tab>
           <TabBar.Tab title={'Stats'}>
             <StatsScreen pokemon={pokemon} />
-          </TabBar.Tab>
-          <TabBar.Tab title={'Description'}>
-            <DescriptionScreen pokemon={pokemon} />
           </TabBar.Tab>
         </TabBar>
       </View>

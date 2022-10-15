@@ -19,7 +19,7 @@ export default StyleSheet.create({
     fontWeight: 'bold',
   },
   detailContainer: {
-    flex: 1,
+    flex: 2,
     backgroundColor: 'white',
     borderTopLeftRadius: 50,
     borderTopRightRadius: 50,
@@ -31,6 +31,6 @@ export default StyleSheet.create({
     height: 250,
     position: 'absolute',
     top: -200,
-    right: Dimensions.get('window').width / 5,
+    right: 0,
   },
 });
