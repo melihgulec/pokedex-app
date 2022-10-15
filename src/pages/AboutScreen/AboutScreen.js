@@ -9,7 +9,6 @@ import capitalize from '../../utils/Capitalize';
 import styles from './AboutScreen.style';
 
 const AboutScreen = ({pokemon}) => {
-  console.log(pokemon);
   return (
     <ScrollView>
       <InfoCard

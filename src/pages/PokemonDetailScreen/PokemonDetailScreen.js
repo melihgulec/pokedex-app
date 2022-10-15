@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
-import {View, Text, FlatList, Image} from 'react-native';
+import {View, Text, FlatList, Image, TouchableOpacity} from 'react-native';
+
+import Icon from 'react-native-vector-icons/dist/Ionicons';
 
 import TabBar from '../../components/TabBar/TabBar';
 import TypeChip from '../../components/TypeChip';
@@ -11,11 +13,15 @@ import StatsScreen from '../StatsScreen';
 
 import styles from './PokemonDetail.style';
 
-const PokemonDetailScreen = ({route}) => {
+const PokemonDetailScreen = ({route, navigation}) => {
   const {pokemon} = route.params;
 
   const renderTypeChips = ({item}) => {
     return <TypeChip type={capitalize(item)} />;
+  };
+
+  const navigateToBack = () => {
+    navigation.goBack();
   };
 
   return (
@@ -25,6 +31,10 @@ const PokemonDetailScreen = ({route}) => {
         {backgroundColor: getColorFromType(pokemon.types[0])},
       ]}>
       <View style={styles.infoContainer}>
+        <TouchableOpacity onPress={navigateToBack}>
+          <Icon name="arrow-back" size={28} color={'white'} />
+        </TouchableOpacity>
+        <WhiteSpace vertical />
         <Text style={styles.pokemonIdText}>
           #{pokemon.id.toString().padStart(3, '0')}
         </Text>

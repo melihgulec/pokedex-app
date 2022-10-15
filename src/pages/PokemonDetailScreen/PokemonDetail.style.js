@@ -27,10 +27,10 @@ export default StyleSheet.create({
     paddingHorizontal: 25,
   },
   pokemonImage: {
-    width: 280,
-    height: 280,
+    width: 250,
+    height: 250,
     position: 'absolute',
-    top: -220,
-    right: Dimensions.get('window').width / 9,
+    top: -200,
+    right: Dimensions.get('window').width / 5,
   },
 });
