@@ -6,6 +6,7 @@ import TypeChip from '../../components/TypeChip';
 import WhiteSpace from '../../components/WhiteSpace/WhiteSpace';
 import capitalize from '../../utils/Capitalize';
 import getColorFromType from '../../utils/ColorFromType';
+import AboutScreen from '../AboutScreen/AboutScreen';
 
 import styles from './PokemonDetail.style';
 
@@ -39,7 +40,7 @@ const PokemonDetailScreen = ({route}) => {
         <Image style={styles.pokemonImage} source={{uri: pokemon.image}} />
         <TabBar>
           <TabBar.Tab title={'About'}>
-            <Text>1. tab</Text>
+            <AboutScreen pokemon={pokemon} />
           </TabBar.Tab>
           <TabBar.Tab title={'Stats'}>
             <Text>2. tab</Text>
